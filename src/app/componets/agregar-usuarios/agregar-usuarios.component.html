@@ -1,36 +1,40 @@
 <div>
     <h2>Añadir</h2>
-    <!--<div class="flex flex-column gap-2">
-        <label htmlFor="username">Username</label>
-        <input pInputText id="username" aria-describedby="username-help"/>
-        <small id="username-help">Enter your username to reset your password.</small>
-    </div>-->
-    <form>      
+    <div>
+      <form class="form-container" >
+        <!--<div class="card flex justify-content-center">
+          <div class="flex flex-column gap-2">
+              <label htmlFor="username">Username</label>
+              <input type="text" pInputText id="username"  name="documento" aria-describedby="username-help" [(ngModel)]="cliente.documento" />
+              <small id="username-help">Enter your username to reset your password.</small>
+          </div>
+        </div>-->
       <div class="form-group">
-        <label for="documento">Documento *</label>
-        <input type="text" id="documento" name="documento" required>
-      </div>
-      <div class="form-group">
-        <label for="direccion">Dirección</label>
-        <input type="text" id="direccion" name="direccion">
-      </div>
-      <div class="form-group">
-        <label for="correo">Correo</label>
-        <input type="text" id="correo" name="correo">
-      </div>
-      <div class="form-group">
-        <label for="celular">Celular</label>
-        <input type="text" id="celular" name="celular">
-      </div>
-      <div class="form-group">
-        <label for="tipoDocumento">Tipo de Documento</label>
-        <select id="tipoDocumento" name="tipoDocumento">
+        <label for="tipoDocumento">Tipo de Documento: </label>
+        <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="cliente.tipoDocumento">
           <option value="CC">CC</option>
           <option value="TI">TI</option>
           <option value="CE">CE</option>
         </select>
       </div>
-      <p-button label="Guardar" styleClass="p-button-raised p-button-text" (click)="guardar()"></p-button>
+      <div class="form-group">
+        <label for="documento">Documento: </label>
+        <input type="text" id="documento" name="documento" pInputText required [(ngModel)]="cliente.documento">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección: </label>
+        <input type="text" id="direccion" name="direccion" pInputText [(ngModel)]="cliente.direccion">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo: </label>
+        <input type="text" id="correo" name="correo" pInputText [(ngModel)]="cliente.correo">
+      </div>
+      <div class="form-group">
+        <label for="celular">Celular: </label>
+        <input type="text" id="celular" name="celular" pInputText [(ngModel)]="cliente.celular">
+      </div>
+      <p-button label="Guardar" (click)="guardar()"></p-button>
     </form>
+    </div>
   </div>
   

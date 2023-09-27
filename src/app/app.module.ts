@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgForm} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,9 @@ import { AgregarUsuariosComponent } from './componets/agregar-usuarios/agregar-u
 // Importa los módulos de PrimeNG que desees utilizar
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { InputTextModule } from 'primeng/inputtext';
     BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    DropdownModule,
+    TableModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
